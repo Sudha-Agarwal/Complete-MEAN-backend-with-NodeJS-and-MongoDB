@@ -1,0 +1,90 @@
+Switch to a Database:
+1. In the MongoDB shell, you can switch to a database (which also creates it if it doesn't exist) using the use command:
+use myDatabase
+
+2. Create a Collection:
+Collections in MongoDB are created implicitly when you insert a document. You can also create them explicitly.
+To create a collection named myCollection:
+db.createCollection("myCollection")
+
+3.Insert Documents:
+To insert a document into myCollection, use the insertOne method:
+db.myCollection.insertOne({ name: "John Doe", age: 30, address: "123 Main St" })
+
+To insert multiple documents, use insertMany:
+db.myCollection.insertMany([
+  { name: "Jane Doe", age: 25, address: "456 Maple St" },
+  { name: "Mike Smith", age: 40, address: "789 Oak St" }
+])
+
+
+4. Querying Documents
+Find All Documents:
+
+To retrieve all documents in a collection:
+db.myCollection.find()
+
+Find with Criteria:
+To find documents that match certain criteria:
+db.myCollection.find({ age: { $gt: 30 } })
+
+Find One Document:
+To find a single document:
+db.myCollection.findOne({ name: "Jane Doe" })
+
+Delete Documents:
+Delete a Single Document:
+
+Use deleteOne to delete a single document that matches a specified filter. For example, to delete a document where name is "John Smith":
+db.myCollection.deleteOne({ name: "John Smith" })
+
+Delete Multiple Documents:
+Use deleteMany to delete all documents that match a specified filter. For example, to delete all documents where age is greater than 25:
+db.myCollection.deleteMany({ age: { $gt: 25 } })
+
+Delete All Documents in a Collection:
+To delete all documents in a collection, you can use deleteMany with an empty filter {}:
+db.myCollection.deleteMany({})
+
+
+MongoDB Commnad line tools
+1. mongoexport is a command-line tool provided by MongoDB that allows users to export data from a MongoDB database into a file. The tool can export data in either JSON or CSV format, making it suitable for backups, data transfers, and analysis in other applications.
+
+mongoexport --uri="mongodb://localhost:27017/myDB" --collection=addresses --out=addresses.json --type=json
+
+To export the same collection to a CSV file, you need to specify the fields:
+mongoexport --uri="mongodb://localhost:27017/myDB" --collection=addresses --out=addresses.csv --type=csv --fields=street,city,state,zip
+
+mongoexport --collection=addresses --db=myDB --out=addresses.json 
+
+2. mongodump is used to create a binary export of the contents of a MongoDB database.
+mongodump --uri=<connection-string> --out=<directory-path>
+
+mongodump --uri="mongodb://localhost:27017/myDB" --out="G:\Sudha\Simplilearn\code\Complete MEAN backend with NodeJS and MongoDB_Original\MongoDB\backup\directory"
+
+3. mongorestore is used to restore data previously backed up using mongodump
+mongorestore --uri=<connection-string> <directory-path>
+
+mongorestore --uri="mongodb://localhost:27017/myDB" "G:\Sudha\Simplilearn\code\Complete MEAN backend with NodeJS and MongoDB_Original\MongoDB\backup\directory"
+
+To restore data from a mongodump backup into a different database, you can use the --nsFrom and --nsTo options with mongorestore.
+mongorestore --uri=<connection-string> --nsFrom="<source-database-name>.*" --nsTo="<target-database-name>.*" <directory-path>
+
+mongorestore --uri="mongodb://localhost:27017" --nsFrom="myDB.*" --nsTo="restoredDB.*" --drop "G:\Sudha\Simplilearn\code\Complete MEAN backend with NodeJS and MongoDB_Original\MongoDB\backup\directory"
+
+4. bsondump is used to convert BSON files to human-readable JSON format.
+bsondump --outFile cities.json cities.bson "G:\Sudha\Simplilearn\code\Complete MEAN backend with NodeJS and MongoDB_Original\MongoDB\backup\directory"
+
+5. mongoimport tool allows you to import data from JSON, CSV, or TSV files into a MongoDB database.
+
+mongoimport --db=myDB --collection=contacts --file=contacts.json
+
+mongoimport --db=myDB1 --collection=addresses --file="C:\Program Files\MongoDB\Tools\100\bin\addresses.json" --type=json
+
+
+mongostat --rowcount=20
+
+mongotop is a command-line tool that provides a method to track the amount of time a MongoDB instance mongod spends reading and writing data.
+mongotop will return every 15 seconds.
+mongotop 15
+
