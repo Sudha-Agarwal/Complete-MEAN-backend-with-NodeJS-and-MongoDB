@@ -1,7 +1,9 @@
 const { MongoClient } = require('mongodb');
 
-//const url = 'mongodb://localhost:27017';
+//const url = 'mongodb://localhost:27017'; //for local MongoDB server
 const url = 'mongodb+srv://sudha-agarwal:oidwq3aXBeoygi1X@cluster0.c1l1lzf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+//for connecting to atlas account
+
 const dbName = 'myDB2';
 
 //create a new MongoClient
