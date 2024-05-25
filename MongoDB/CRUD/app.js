@@ -1,7 +1,7 @@
 const { MongoClient } = require('mongodb');
 
-//const url = 'mongodb://localhost:27017'; //for local MongoDB server
-const url = 'mongodb+srv://sudha-agarwal:oidwq3aXBeoygi1X@cluster0.c1l1lzf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const url = 'mongodb://localhost:27017'; //for local MongoDB server
+//const url = 'mongodb+srv://sudha-agarwal:oidwq3aXBeoygi1X@cluster0.c1l1lzf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 //for connecting to atlas account
 
 const dbName = 'myDB2';
@@ -22,10 +22,15 @@ async function main(){
         const collection = db.collection('mycollection');
 
         //Insert a document
-        const insertResult = await collection.insertOne({ name: "John Doe", age: 30, address: "123 Main St" });
-        console.log('Inserted document: ' + insertResult.insertedId);
+        collection.insertOne({ name: "John Doe", age: 30, address: "123 Main St" })
+        .then((res)=>{console.log('Inserted document: ' + res.insertedId)
+        const findResult = collection.findOne({name:'John Doe'}).then().catch();
+        console.log("Found document: " + findResult.name);
+        }).catch(err=> console.log(err));
+        
 
         //Find a document
+        //console.log('finding')
         const findResult = await collection.findOne({name:'John Doe'});
         console.log("Found document: " + findResult.name);
 
@@ -36,10 +41,6 @@ async function main(){
         //delete a document
         const deleteResult = await collection.deleteOne({name:'John Doe'})
         console.log("deleted document count: " + deleteResult.deletedCount)
-
-
-
-
     }
     catch(err){
         console.log(err)
