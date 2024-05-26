@@ -1,0 +1,10 @@
+[
+    { "field": 12, "category": "A", "quantity": 20 },
+    { "field": 8, "category": "B", "quantity": 15 },
+    { "field": 15, "category": "A", "quantity": 10 },
+    { "field": 10, "category": "B", "quantity": 25 },
+    { "field": 11, "category": "C", "quantity": 30 },
+    { "field": 9, "category": "A", "quantity": 18 },
+    { "field": 13, "category": "B", "quantity": 22 },
+    { "field": 14, "category": "C", "quantity": 12 }
+  ]

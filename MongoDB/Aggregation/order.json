@@ -1,0 +1,38 @@
+[
+    {
+      "_id": "orderId1",
+      "userId": "customerId1",
+      "product": "Product A",
+      "price": 10,
+      "quantity": 2
+    },
+    {
+      "_id": "orderId2",
+      "userId": "customerId2",
+      "product": "Product B",
+      "price": 15,
+      "quantity": 1
+    },
+    {
+      "_id": "orderId3",
+      "userId": "customerId1",
+      "product": "Product C",
+      "price": 20,
+      "quantity": 3
+    },
+    {
+        "_id": "orderId4",
+        "userId": "customerId3",
+        "product": "Product C",
+        "price": 20,
+        "quantity": 3
+      },
+      {
+        "_id": "orderId5",
+        "userId": "customerId3",
+        "product": "Product A",
+        "price": 20,
+        "quantity": 3
+      }
+  ]
+  

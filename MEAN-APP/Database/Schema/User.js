@@ -15,7 +15,7 @@ module.exports = new mongoose.Schema({
     },
     email:{
         type:String,
-        required:[true,"email is required"],
+        required:[true,"email is required"],       
         //custom validation
         validate:{
             validator: function(v){
@@ -23,6 +23,12 @@ module.exports = new mongoose.Schema({
             },
             message: props=> `${props.value} is not a valid email`
         }
+    },
+    password:{
+        type:String,
+        required: [true, "Password is required"],
+        minlength: [8, 'Password must be atleast 8 characters long'],
+        
     }
 
 })

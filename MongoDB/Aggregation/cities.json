@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c2a"
+  },
+  "name": "Seoul",
+  "country": "South Korea",
+  "continent": "Asia",
+  "population": 25.674
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c2b"
+  },
+  "name": "Mumbai",
+  "country": "India",
+  "continent": "Asia",
+  "population": 19.98
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c2c"
+  },
+  "name": "Lagos",
+  "country": "Nigeria",
+  "continent": "Africa",
+  "population": 13.463
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c2d"
+  },
+  "name": "Beijing",
+  "country": "China",
+  "continent": "Asia",
+  "population": 19.618
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c2e"
+  },
+  "name": "Shanghai",
+  "country": "China",
+  "continent": "Asia",
+  "population": 25.582
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c2f"
+  },
+  "name": "Osaka",
+  "country": "Japan",
+  "continent": "Asia",
+  "population": 19.281
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c30"
+  },
+  "name": "Cairo",
+  "country": "Egypt",
+  "continent": "Africa",
+  "population": 20.076
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c31"
+  },
+  "name": "Tokyo",
+  "country": "Japan",
+  "continent": "Asia",
+  "population": 37.4
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c32"
+  },
+  "name": "Karachi",
+  "country": "Pakistan",
+  "continent": "Asia",
+  "population": 15.4
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c33"
+  },
+  "name": "Dhaka",
+  "country": "Bangladesh",
+  "continent": "Asia",
+  "population": 19.578
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c34"
+  },
+  "name": "Rio de Janeiro",
+  "country": "Brazil",
+  "continent": "South America",
+  "population": 13.293
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c35"
+  },
+  "name": "São Paulo",
+  "country": "Brazil",
+  "continent": "South America",
+  "population": 21.65
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c36"
+  },
+  "name": "Mexico City",
+  "country": "Mexico",
+  "continent": "North America",
+  "population": 21.581
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c37"
+  },
+  "name": "Delhi",
+  "country": "India",
+  "continent": "Asia",
+  "population": 28.514
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c38"
+  },
+  "name": "Buenos Aires",
+  "country": "Argentina",
+  "continent": "South America",
+  "population": 14.967
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c39"
+  },
+  "name": "Kolkata",
+  "country": "India",
+  "continent": "Asia",
+  "population": 14.681
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c3a"
+  },
+  "name": "New York",
+  "country": "United States",
+  "continent": "North America",
+  "population": 18.819
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c3b"
+  },
+  "name": "Manila",
+  "country": "Philippines",
+  "continent": "Asia",
+  "population": 13.482
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c3c"
+  },
+  "name": "Chongqing",
+  "country": "China",
+  "continent": "Asia",
+  "population": 14.838
+},
+{
+  "_id": {
+    "$oid": "6652ee566be357e686b80c3d"
+  },
+  "name": "Istanbul",
+  "country": "Turkey",
+  "continent": "Europe",
+  "population": 14.751
+}]

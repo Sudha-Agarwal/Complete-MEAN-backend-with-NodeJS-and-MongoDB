@@ -1,0 +1,27 @@
+<div>
+    <form #userForm = "ngForm" (ngSubmit) = "onSubmit(userForm)">
+        <div>
+            Name:<input type="text" id="name" name="name" ngModel #name="ngModel">
+        <div *ngIf="errors.name">{{errors.name}}</div>
+        </div>
+
+        <div>
+            Age:<input type="number" id="age" name="age" ngModel #age="ngModel">
+            <div *ngIf="errors.age">{{errors.age}}</div>
+        </div>
+
+        <div>
+            Email:<input type="email" id="email" name="email" ngModel #email="ngModel">
+            <div *ngIf="errors.email">{{errors.email}}</div>
+        </div>
+
+        <div>
+            Password:<input type="password" id="password" name="password" ngModel #password="ngModel">
+            <div *ngIf="errors.password">{{errors.password}}</div>
+        </div>
+
+        <button type="submit">Submit</button>
+
+        
+    </form>
+</div>

@@ -1,0 +1,18 @@
+[
+    {
+      "_id": "customerId1",
+      "name": "John Doe",
+      "email": "john@example.com"
+    },
+    {
+      "_id": "customerId2",
+      "name": "Alice Smith",
+      "email": "alice@example.com"
+    },
+    {
+      "_id": "customerId3",
+      "name": "Bob Johnson",
+      "email": "bob@example.com"
+    }
+  ]
+  
