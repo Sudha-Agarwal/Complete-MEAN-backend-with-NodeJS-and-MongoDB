@@ -121,4 +121,12 @@ exports.viewReport = async (req, res) => {
     }
 };
 
-
+// View all patient reports
+exports.viewAllReports = async (req, res) => {
+    try {
+        const reports = await PatientReport.find();
+        res.render('patients/viewAllReports', { reports });
+    } catch (error) {
+        res.status(400).send(error.message);
+    }
+};

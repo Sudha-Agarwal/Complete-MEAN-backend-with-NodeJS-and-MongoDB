@@ -17,10 +17,10 @@ router.get('/login', patientController.showLoginForm);
 router.post('/login', patientController.loginPatient);
 
 // Patient report routes
-/*router.get('/reports/create', patientController.showCreateReportForm);
+router.get('/reports/create', patientController.showCreateReportForm);
 router.post('/reports/create', patientController.createReport);
 router.get('/reports/:reportId', patientController.viewReport);
-router.get('/reports', patientController.viewAllReports);*/
+router.get('/reports', patientController.viewAllReports);
 
 //Patient report by patient Id
 router.get('/reports/:id', patientController.getPatientProfile);
