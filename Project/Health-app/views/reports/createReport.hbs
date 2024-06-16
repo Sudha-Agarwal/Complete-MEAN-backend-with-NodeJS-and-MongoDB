@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Patient Report</title>
+</head>
+<body>
+    <h1>Create Patient Report</h1>
+    <form action="/reports/create" method="POST">
+        <label for="patientName">Patient Name:</label>
+        <input type="text" id="patientName" name="patientName" required>
+        <br>
+        <label for="patientEmail">Patient Email:</label>
+        <input type="email" id="patientEmail" name="patientEmail" required>
+        <br>
+        <label for="reportText">Report Text:</label>
+        <textarea id="reportText" name="reportText" rows="4" required></textarea>
+        <br>
+        <button type="submit">Create Report</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Patients</title>
+</head>
+<body>
+    <h1>All Patients</h1>
+
+    <!-- Search form (if needed) -->
+    <form action="/patients/search" method="GET">
+        <label for="search">Search by Name:</label>
+        <input type="text" id="search" name="search" placeholder="Enter patient's name">
+        <button type="submit">Search</button>
+    </form>
+
+    <ul>
+        {{#each patients}}
+        <li>
+            <a href="/patients/{{this._id}}">{{this.name}}</a>
+            <!-- Optionally display other patient information -->
+            <!-- For example: {{this.email}}, {{this.dateOfBirth}}, etc. -->
+        </li>
+        {{/each}}
+    </ul>
+
+    <a href="/patients">Back to Patient Options</a>
+</body>
+</html>

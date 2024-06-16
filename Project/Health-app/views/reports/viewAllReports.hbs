@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Patient Reports</title>
+</head>
+<body>
+    <h1>All Patient Reports</h1>
+    <ul>
+        {{#each reports}}
+        <li>
+            <a href="/reports/reports/{{this._id}}">Report {{this._id}}</a>
+            <!-- Add more details if needed -->
+        </li>
+        {{/each}}
+    </ul>
+    <a href="/reports">Back to Report Options</a>
+</body>
+</html>

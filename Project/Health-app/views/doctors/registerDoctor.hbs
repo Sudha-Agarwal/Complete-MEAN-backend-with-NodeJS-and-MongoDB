@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Doctor</title>
+</head>
+<body>
+    <h1>Register as a Doctor</h1>
+    <form action="/doctors/register" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <label for="specialty">Specialty:</label>
+        <input type="text" id="specialty" name="specialty" required>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>

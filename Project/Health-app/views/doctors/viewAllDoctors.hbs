@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Doctors</title>
+    <style>
+        .update-form {
+            display: none; /* Initially hide update forms */
+            margin-top: 10px;
+        }        
+    </style>
+</head>
+<body>
+    <h1>All Doctors</h1>
+
+    <!-- Search form -->
+    <form action="/doctors/search" method="GET">
+        <label for="search">Search by Name:</label>
+        <input type="text" id="search" name="search" placeholder="Enter doctor's name">
+        <button type="submit">Search</button>
+    </form>
+
+    <ul>
+        {{#each doctors}}
+        <li>
+            <a href="/doctors/{{this._id}}">{{this.name}}</a>
+            <!-- Update Button -->
+            <button class="toggle-update-form">Update</button>
+            <!-- Update Form -->
+            <form class="update-form" action="/doctors/{{this._id}}" method="POST">
+                <input type="hidden" name="_method" value="PUT">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="{{this.name}}" required>
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="{{this.email}}" required>
+                <br>
+                <label for="specialty">Specialty:</label>
+                <input type="text" id="specialty" name="specialty" value="{{this.specialty}}" required>
+                <br>
+                <button type="submit">Update</button>
+            </form>
+            
+            <!-- Delete Form -->
+            <form action="/doctors/{{this._id}}" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">Delete</button>
+            </form>
+        </li>
+        {{/each}}
+    </ul>
+    <a href="/doctors">Back to Doctor Options</a>
+
+    <script>
+        // JavaScript to toggle visibility of update forms
+        const toggleButtons = document.querySelectorAll('.toggle-update-form');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const form = button.nextElementSibling;
+                form.classList.toggle('update-form');
+            });
+        });
+    </script>
+</body>
+</html>

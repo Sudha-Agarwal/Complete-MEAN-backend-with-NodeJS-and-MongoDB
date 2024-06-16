@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Profile</title>
+</head>
+<body>
+    <h1>Patient Profile</h1>
+    <div>
+        <p><strong>Name:</strong> {{ patient.name }}</p>
+        <p><strong>Email:</strong> {{ patient.email }}</p>
+        <!-- Add more details as needed -->
+    </div>
+
+    <!-- Link to view all reports for the patient -->
+    <h2>Patient Reports</h2>
+    <ul>
+        {{#each reports}}
+        <li>
+            <a href="/patients/reports/{{this._id}}">Report {{ @index }}</a>
+        </li>
+        {{/each}}
+    </ul>
+
+    <a href="/patients">Back to Patient Options</a>
+</body>
+</html>
