@@ -66,7 +66,7 @@ INSERT INTO Project (project_name, start_date, end_date, budget, department_id) 
 -- Insert data into Manager table
 INSERT INTO Manager (employee_id, project_id) VALUES
 (1, 1),
-(2, 2);
+(1, 2);
 
 
 CREATE TABLE students (
@@ -110,7 +110,8 @@ CREATE TABLE order_items (
     product_id INT,
     quantity INT,
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
-    FOREIGN KEY (product_id) REFERENCES products(product_id)
+    FOREIGN KEY (product_id) REFERENCES products(product_id),
+    PRIMARY KEY (order_id, product_id)
 );
 
 
@@ -137,3 +138,4 @@ INSERT INTO order_items (order_id, product_id, quantity) VALUES
     (101, 1, 2), -- John Doe ordered 2 laptops
     (102, 2, 3), -- Jane Smith ordered 3 smartphones
     (103, 3, 1); -- Bob Johnson ordered 1 pair of headphones
+    (103, 2, 1); -- Bob Johnson ordered 1 smartphone
