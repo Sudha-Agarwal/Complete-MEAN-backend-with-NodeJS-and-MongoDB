@@ -7,11 +7,11 @@ router.get('/', (req, res) => res.render('patients/patients'));
 // View all patients
 router.get('/all', patientController.getAllPatients);
 
-// Fetch patient profile and their reports
-router.get('/:id', patientController.getPatientProfile);
-
 // Register and login routes
+//router.get('/register', (req, res) => res.render('patients/register'));
+//router.get('/login', (req, res) => res.render('doctors/login'));
 router.get('/register', patientController.showRegisterForm);
+
 router.post('/register', patientController.registerPatient);
 router.get('/login', patientController.showLoginForm);
 router.post('/login', patientController.loginPatient);
@@ -24,6 +24,10 @@ router.get('/reports', patientController.viewAllReports);
 
 //Patient report by patient Id
 router.get('/reports/:id', patientController.getPatientProfile);
+
+// Fetch patient profile and their reports
+router.get('/:id', patientController.getPatientProfile);
+
 
 
 // View all patients

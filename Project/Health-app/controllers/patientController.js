@@ -3,6 +3,7 @@ const PatientReport = require('../models/patientReport');
 
 // Show registration form
 exports.showRegisterForm = (req, res) => {
+    console.log("register");
     res.render('patients/register');
 };
 
